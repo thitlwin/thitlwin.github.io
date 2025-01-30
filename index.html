@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thit Lwin | Android Developer</title>
+    <title>Mr. Thit Lwin | Android Developer</title>
     <style>
         body { 
             font-family: 'Poppins', sans-serif; 
@@ -41,13 +41,49 @@
             object-fit: cover;
             border: 3px solid #ffcc00;
         }
+        .accordion {
+            background-color: #333;
+            color: #ffcc00;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+        .active, .accordion:hover {
+            background-color: #555;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var acc = document.getElementsByClassName("accordion");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <header>
             <img src="https://tinyurl.com/thitphoto" alt="Profile Image" class="profile-image">
-            <h1>Thit Lwin</h1>
+            <h1>Mr. Thit Lwin</h1>
             <h2>Android Developer | Flutter | Web Development</h2>
         </header>
         
@@ -55,45 +91,69 @@
             <section class="contact section">
                 <h2>Contact</h2>
                 <p>Email: <a href="mailto:saithitlwin@gmail.com">saithitlwin@gmail.com</a></p>
-                <p>Telegram: +95 9256130323</p>
+                <p>Telegram & WhatsApp: +95 9256130323</p>
                 <p>Location: Da Nang, Vietnam</p>
             </section>
             
             <section class="about section">
                 <h2>About Me</h2>
-                <p>A highly skilled software developer with 9 years of experience in Android, Flutter, and web development. Passionate about creating high-quality applications and improving user experience.</p>
+                <p>A highly skilled software developer with 9 years of experience in Android, Flutter, and web development. Passionate about creating high-quality applications and improving user experience.
+                    Strong problem-solving skills and a passion for staying current with the latest developments in the field.
+                </p>
             </section>
         </div>
         
         <section class="experience section">
             <h2>Experience</h2>
+            <button class="accordion">Project Coordinator & Java Web Developer - Freelance (2024 - Present)</button>
+            <div class="panel"><p>Freelance project managing a game, coordinating a team, and developing Java Spring Boot backend services.</p></div>                    
+            
+            <button class="accordion">Android Developer - Zuju Gameplay PTE. Ltd, Singapore (2023 - 2024)</button>
+            <div class="panel"><p>Worked on key gameplay features using MVVM and advanced animations with Rive.</p></div>
+            
+            <button class="accordion">Android Developer - Digital Services SG Six PTE. Ltd, Singapore (2022-2023)</button>
+            <div class="panel"><p>Implemented new features and refactored project code from MVP to MVVM.</p></div>
+            
+            <button class="accordion">Android & Flutter - Twinrock PTE. Ltd, Singapore (2019-2021)</button>
+            <div class="panel">
+                <p>Maintained and developed security service management apps, led a team, and planned sprints.</p>
+                </div>
+            
+            <button class="accordion">Project Manager, Web Developer & Android Developer - Bits Manager Co., Ltd, Myanmar (2014-2018)</button>
+            <div class="panel">
+                <p>Managed multiple large-scale projects, developed web applications, and created Android apps.</p>            
+            </div>
+        </section>
+
+        <section class="education section">
+            <h2>Education</h2>
             <ul>
-                <li><strong>Project Coordinator & Java Web Developer</strong> - Freelance (2024 - Present)</li>
-                <li><strong>Android Developer (Tayarr - Media Player App)</strong> - Own Project</li>
-                <li><strong>Android Developer</strong> - Zuju Gameplay PTE. Ltd, Singapore (2023)</li>
-                <li><strong>Android Developer</strong> - Digital Services SG Six PTE. Ltd, Singapore (2022-2023)</li>
-                <li><strong>Senior Software Engineer</strong> - Twinrock PTE. Ltd, Singapore (2019-2021)</li>
-                <li><strong>Project Manager, Web Developer (Team Leader) & Android Developer</strong> - Bits Manager Co., Ltd, Myanmar (2014-2018)</li>
+                <li><strong>Master of Computer Science (M.C.Sc)</strong> - University of Computer Studies, Mandalay, Myanmar (February 2016)</li>
+                <li><strong>Project Management Professional (PMP)</strong> - 5 days course in PMBOK® Guide – Sixth Edition (October 2018)</li>
+                <li><strong>Software Engineering Training Course</strong> - ICT Training Institute, Myanmar (April 2014)</li>
+                <li><strong>Mobile App Training Program</strong> - Samsung Tech Institute, Myanmar (November 2014)</li>
+                <li><strong>Bachelor of Computer Science (B.C.Sc - Hons.)</strong> - University of Computer Studies, Mandalay, Myanmar (February 2012)</li>
             </ul>
         </section>
         
         <section class="skills section">
             <h2>Skills</h2>
             <ul>
-                <li>Kotlin, Java, Flutter</li>
+                <li>Kotlin, Java, Flutter, PHP</li>
                 <li>Jetpack Compose, MVVM, Firebase</li>
-                <li>REST API, GraphQL, Git</li>
-                <li>Project Management, Agile</li>
+                <li>REST API, GraphQL, Git, CI/CD</li>
+                <li>MySQL, MSSQL</li>
+                <li>Project Management, Agile</li>            
             </ul>
         </section>
         
         <section class="projects section">
             <h2>Projects</h2>
-            <a href="https://play.google.com/store/apps/details?id=com.thit.yawki" target="_blank">Tayarr</a><br>
-            <a href="https://play.google.com/store/apps/details?id=com.zuju.kickoff" target="_blank">Kickoff Zuju Football Gameplay</a><br>
-            <a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz" target="_blank">Jaz Accounting</a><br>
-            <a href="https://play.google.com/store/apps/details?id=com.tinvio.tinvio" target="_blank">Tinvio Chat-to-Order</a><br>
-            <a href="https://play.google.com/store/apps/details?id=com.seagull.socceroddspro" target="_blank">Soccer Odds App</a>
+            <li><a href="https://play.google.com/store/apps/details?id=com.thit.yawki" target="_blank">Tayarr (Music Player App)</a><br></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.zuju.kickoff" target="_blank">Kickoff Zuju (Football Gameplay App)</a><br></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz" target="_blank">Jaz (Accounting App)</a><br></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.tinvio" target="_blank">Tinvio (Chat-to-Order App)</a><br></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.seagull.socceroddspro" target="_blank">Myanmar Soccer Odds App</a></li>
         </section>
     </div>
 </body>
