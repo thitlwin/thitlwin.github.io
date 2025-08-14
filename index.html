@@ -1,111 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Thit Lwin | Android Developer</title>
-    <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover; 
-            color: #fff; 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mr. Thit Lwin | Mobile & Web Developer</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center/cover;
+        color: #f4f4f4;
+    }
+    .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #ffcc00;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    header img:hover {
+        transform: scale(1.05);
+    }
+    h1 {
+        color: #ffcc00;
+        margin: 10px 0 5px;
+    }
+    h2 {
+        color: #ffcc00;
+        border-bottom: 2px solid #ffcc00;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    p, li {
+        line-height: 1.6;
+    }
+    ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+    ul li::before {
+        content: "✔";
+        color: #ffcc00;
+        margin-right: 8px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr;
         }
-        .container { 
-            max-width: 1100px; 
-            margin: 40px auto; 
-            background: rgba(0, 0, 0, 0.8); 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
-        }
-        header { text-align: center; padding-bottom: 20px; }
-        h1 { color: #ffcc00; }
-        h2 { color: #ffcc00; border-bottom: 3px solid #ffcc00; padding-bottom: 5px; }
-        .section { margin-bottom: 30px; padding: 20px; }
-        .contact a, .projects a { color: #ffcc00; text-decoration: none; font-weight: bold; }
-        .contact a:hover, .projects a:hover { text-decoration: underline; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 8px 0; }
-        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) {
-            .grid-container { grid-template-columns: 1fr; }
-        }
-        .profile-image {
-            display: block;
-            margin: 0 auto 20px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #ffcc00;
-        }
-        .accordion {
-            background-color: #333;
-            color: #ffcc00;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-        }
-        .active, .accordion:hover {
-            background-color: #555;
-        }
-        .panel {
-            padding: 0 18px;
-            display: none;
-            background-color: rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-        }
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            color: #ffcc00;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var acc = document.getElementsByClassName("accordion");
-            for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
+    }
+    .accordion {
+        background-color: #222;
+        color: #ffcc00;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        outline: none;
+        transition: background 0.3s ease;
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+        border-radius: 6px;
+    }
+    .accordion:hover, .accordion.active {
+        background-color: #444;
+    }
+    .panel {
+        display: none;
+        padding: 0 15px 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+    }
+    .contact a, .projects a {
+        color: #ffcc00;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    .contact a:hover, .projects a:hover {
+        color: #ffd633;
+    }
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .social-icons a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 204, 0, 0.1);
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+    }
+    .social-icons a:hover {
+        background: rgba(255, 204, 0, 0.3);
+    }
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll(".accordion").forEach(button => {
+            button.addEventListener("click", () => {
+                button.classList.toggle("active");
+                let panel = button.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? "none" : "block";
+            });
         });
-    </script>
+    });
+</script>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="https://tinyurl.com/thitphoto" alt="Profile Image" class="profile-image">
+            <img src="https://tinyurl.com/thitphoto" alt="Profile Image">
             <h1>Mr. Thit Lwin</h1>
-            <h2>Android Developer | Flutter | Web Development</h2>
+            <h2>Senior Mobile Developer | Flutter | Android | Web</h2>
         </header>
-        
+
+        <!-- Contact & About -->
         <div class="grid-container">
-            <section class="contact section">
+            <section class="contact">
                 <h2>Contact</h2>
                 <p>Email: <a href="mailto:saithitlwin@gmail.com">saithitlwin@gmail.com</a></p>
                 <p>Telegram & WhatsApp: +95 9256130323</p>
@@ -113,79 +151,140 @@
                 <p>Phone: +84 374773185</p>
                 <p>Location: Da Nang, Vietnam</p>
             </section>
-            
-            <section class="about section">
+
+            <section class="about">
                 <h2>About Me</h2>
-                <p>A highly skilled software developer with 9 years of experience in Android, Flutter, and web development. Passionate about creating high-quality applications and improving user experience.
-                    Strong problem-solving skills and a passion for staying current with the latest developments in the field.
-                </p>
+                <p>Innovative and results-driven developer with 10+ years of experience in mobile and web development. Adept at building high-performance apps with Flutter, Android, and modern web technologies. Passionate about clean code, scalable architecture, and delivering exceptional user experiences.</p>
             </section>
         </div>
-        
-        <section class="experience section">
-            <h2>Experience</h2>
-            <button class="accordion">Project Coordinator & Java Web Developer - Freelance (2024 - Present)</button>
-            <div class="panel"><p>Freelance project managing a game, coordinating a team, and developing Java Spring Boot backend services.</p></div>                    
-            
-            <button class="accordion">Android Developer - Zuju Gameplay PTE. Ltd, Singapore (2023 - 2024)</button>
-            <div class="panel"><p>Worked on key gameplay features using MVVM and advanced animations with Rive.</p></div>
-            
-            <button class="accordion">Android Developer - Digital Services SG Six PTE. Ltd, Singapore (2022-2023)</button>
-            <div class="panel"><p>Implemented new features and refactored project code from MVP to MVVM.</p></div>
-            
-            <button class="accordion">Android & Flutter - Twinrock PTE. Ltd, Singapore (2019-2021)</button>
-            <div class="panel">
-                <p>Maintained and developed security service management apps, led a team, and planned sprints.</p>
-                </div>
-            
-            <button class="accordion">Project Manager, Web Developer & Android Developer - Bits Manager Co., Ltd, Myanmar (2014-2018)</button>
-            <div class="panel">
-                <p>Managed multiple large-scale projects, developed web applications, and created Android apps.</p>            
-            </div>
-        </section>
 
-        <section class="education section">
+
+        <!-- Experience -->
+         <section class="section">
+            <h2>Experience</h2>
+
+            <button class="accordion">Senior Flutter Developer - JOY Detox & Healthy Meal Distribution Co.Ltd, Myanmar (Jan 2024 - Present)</button>
+            <div class="panel">
+                <ul>
+                <li>Led development and maintenance of the JOY Detox & Healthy Meal mobile app (<a href="https://play.google.com/store/apps/details?id=com.joy.detox_app" target="_blank">Google Play</a>), delivering a smooth user experience for detox programs, meal plans, and real-time customer support.</li>
+                <li>Implemented a real-time chat module using Firebase, enabling seamless and low-latency communication between customers and coaches.</li>
+                <li>Managed the app’s state management architecture using Riverpod, enhancing code modularity, reactivity, and testability.</li>
+                <li>Implemented CI/CD pipelines by integrating Fastlane with GitHub Actions, automating build, test, and deployment processes to Google Play Store and Apple App Store.</li>
+                <li>Collaborated with cross-functional teams to plan, prioritize, and deliver new features on schedule.</li>
+                <li>Utilized technologies and tools such as Dart, Flutter, Riverpod, Firebase, Git, Fastlane, GitHub Actions.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Android Developer - Zuju Gameplay PTE. Ltd, Singapore (2023 - 2024)</button>
+            <div class="panel">
+                <ul>
+                <li>Implemented key gameplay features (such as Live Match Proposition, Battling, etc) for Kickoff Zuju using MVVM design pattern.</li>
+                <li>Utilized Android’s built-in and Rive’s animation library to ensure smooth, interactive animations.</li>
+                <li>Developed and maintained a suite of unit tests for key features.</li>
+                <li>Collaborated with cross-functional teams to refine requirements.</li>
+                <li>Participated in code review process to ensure adherence to coding standards and best practices.</li>
+                <li>Utilized technologies: Kotlin, Android SDK, Retrofit, Junit, Espresso, Git, GraphQL, AWS AppSync.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Android Developer - Digital Services SG Six PTE. Ltd, Singapore (2022 - 2023)</button>
+            <div class="panel">
+                <ul>
+                <li>Implemented new features for Tinvio & Jaz Accounting apps.</li>
+                <li>Collaborated with designers, backend developers, and product owners for smooth development processes.</li>
+                <li>Migrated project code from MVP to MVVM design pattern.</li>
+                <li>Wrote and maintained automated tests to ensure code stability.</li>
+                <li>Technologies: Kotlin, Android SDK, Retrofit, Junit, Git, GraphQL.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Android & Flutter Developer - Twinrock PTE. Ltd, Singapore (2019 - 2021)</button>
+            <div class="panel">
+                <ul>
+                <li>Maintained and enhanced the company’s Thor Security Service Management app.</li>
+                <li>Developed Flutter apps using Bloc and GetX for state management.</li>
+                <li>Provided technical guidance and mentorship to junior developers.</li>
+                <li>Planned sprints and managed app publishing for Android & iOS.</li>
+                <li>Technologies: Java, MVP, Dart, Flutter, Git.</li>
+                </ul>
+            </div>
+
+            <button class="accordion">Project Manager, Web & Android Developer - Bits Manager Co., Ltd, Myanmar (2014 - 2018)</button>
+            <div class="panel">
+                <h4>Project Manager</h4>
+                <p><em>January 2017 - December 2018 (2 years)</em></p>
+                <ul>
+                    <li>Managed multiple large-scale software development projects, including the development of an e-Commerce app.</li>
+                    <li>Developed project schedules and budgets, and tracked progress to ensure timely delivery of high-quality products.</li>
+                    <li>Led development and operations teams to ensure smooth and efficient processes.</li>
+                    <li>Achieved a 95% on-time delivery rate.</li>
+                    <li>Additionally contributed as a Developer (Web & Android), implementing selected app features.</li>
+                </ul>
+
+                <h4>Web Developer (Team Leader)</h4>
+                <p><em>April 2015 - December 2016 (1 year, 8 months)</em></p>
+                <ul>
+                    <li>Developed and maintained multiple web applications and websites, including the company’s main site and a soccer betting web app.</li>
+                    <li>Led the development team using a servant leadership approach.</li>
+                    <li>Mentored team members and internship students.</li>
+                    <li>Managed web application hosting using AWS and Digital Ocean.</li>
+                </ul>
+
+                <h4>Android Developer</h4>
+                <p><em>April 2014 - March 2015 (1 year)</em></p>
+                <ul>
+                    <li>Developed a soccer odds app from scratch using Java.</li>
+                    <li>Self-managed all project activities with minimal guidance.</li>
+                    <li>Successfully delivered the application on schedule.</li>
+                </ul>
+            </div>
+        </section>                        
+
+        <!-- Education -->
+        <section class="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>Master of Computer Science (M.C.Sc)</strong> - University of Computer Studies, Mandalay, Myanmar (February 2016)</li>
-                <li><strong>Project Management Professional (PMP)</strong> - 5 days course in PMBOK® Guide – Sixth Edition (October 2018)</li>
-                <li><strong>Software Engineering Training Course</strong> - ICT Training Institute, Myanmar (April 2014)</li>
-                <li><strong>Mobile App Training Program</strong> - Samsung Tech Institute, Myanmar (November 2014)</li>
-                <li><strong>Bachelor of Computer Science (B.C.Sc - Hons.)</strong> - University of Computer Studies, Mandalay, Myanmar (February 2012)</li>
+                <li><strong>M.C.Sc</strong> – University of Computer Studies, Mandalay (2016)</li>
+                <li><strong>PMP Course</strong> – PMBOK® Guide – Sixth Edition (2018)</li>
+                <li><strong>Software Engineering Training</strong> – ICT Training Institute (2014)</li>
+                <li><strong>Mobile App Training</strong> – Samsung Tech Institute (2014)</li>
+                <li><strong>B.C.Sc (Hons.)</strong> – University of Computer Studies, Mandalay (2012)</li>
             </ul>
         </section>
-        
-        <section class="skills section">
+
+        <!-- Skills -->
+        <section class="skills">
             <h2>Skills</h2>
             <ul>
-                <li>Kotlin, Java, Flutter, PHP</li>
-                <li>Jetpack Compose, MVVM, Firebase</li>
-                <li>REST API, GraphQL, Git, CI/CD</li>
+                <li>Kotlin, Java, Swift, Dart, PHP (Laravel), Python (Django)</li>
+                <li>Flutter, Jetpack Compose, MVVM, Riverpod</li>
+                <li>Firebase, REST API, GraphQL</li>
+                <li>CI/CD, Git, Fastlane</li>
                 <li>MySQL, MSSQL</li>
-                <li>Project Management, Agile</li>            
+                <li>Project Management, Agile</li>
             </ul>
         </section>
-        
-        <section class="projects section">
+
+        <!-- Projects -->
+        <section class="projects">
             <h2>Projects</h2>
-            <li><a href="https://play.google.com/store/apps/details?id=com.thit.yawki" target="_blank">Tayarr (Music Player App)</a><br></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.zuju.kickoff" target="_blank">Kickoff Zuju (Football Gameplay App)</a><br></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz" target="_blank">Jaz (Accounting App)</a><br></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.tinvio" target="_blank">Tinvio (Chat-to-Order App)</a><br></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.seagull.socceroddspro" target="_blank">Myanmar Soccer Odds App</a></li>
+            <ul>
+                <li><a href="https://play.google.com/store/apps/details?id=com.joy.detox_app" target="_blank">JOY - Detox & Healthy Meal App </a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.thit.yawki" target="_blank">Tayarr – Music Player App</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.zuju.kickoff" target="_blank">Kickoff Zuju – Football Gameplay</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz" target="_blank">Jaz – Accounting App</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.tinvio.tinvio" target="_blank">Tinvio – Chat-to-Order App</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.seagull.socceroddspro" target="_blank">Myanmar Soccer Odds</a></li>
+            </ul>
         </section>
-        <section class="contact section">
+
+        <!-- Social Links -->
+        <section class="contact">
             <h2>Contact Me</h2>
             <div class="social-icons">
-                <a href="https://t.me/+959256130323" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon"> Telegram
-                </a>
-                <a href="https://wa.me/959256130323" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon"> WhatsApp
-                </a>
-                <a href="https://www.linkedin.com/in/thit-lwin/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"> LinkedIn
-                </a>
+                <a href="https://t.me/+959256130323" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">Telegram</a>
+                <a href="https://wa.me/959256130323" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WhatsApp</a>
+                <a href="https://www.linkedin.com/in/thit-lwin/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">LinkedIn</a>
             </div>
         </section>
     </div>
