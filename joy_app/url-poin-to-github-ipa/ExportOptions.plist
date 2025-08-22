@@ -7,11 +7,11 @@
 	<key>manifest</key>
 	<dict>
 		<key>appURL</key>
-		<string>https://thitlwin.github.io/blob/main/joy_app/production-app-2/JOY.ipa</string>
+		<string>https://thitlwin.github.io/joy_app/url-poin-to-github-ipa/JOY.ipa</string>
 		<key>displayImageURL</key>
-		<string>https://joyweightmanagement.com/wp-content/uploads/2021/05/joy-m-logo.svg</string>
+		<string>https://thitlwin.github.io/joy_app/joylogo.png</string>
 		<key>fullSizeImageURL</key>
-		<string>https://joyweightmanagement.com/wp-content/uploads/2021/05/joy-m-logo.svg</string>
+		<string>https://thitlwin.github.io/joy_app/joylogo.png</string>
 	</dict>
 	<key>method</key>
 	<string>release-testing</string>
@@ -22,6 +22,6 @@
 	<key>teamID</key>
 	<string>2XGQ94M9SZ</string>
 	<key>thinning</key>
-	<string>&lt;none&gt;</string>
+	<string>&lt;thin-for-all-variants&gt;</string>
 </dict>
 </plist>
