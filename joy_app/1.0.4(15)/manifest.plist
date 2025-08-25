@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://thitlwin.github.io/joy_app/1.0.4(15)/manifest.plist</string>
+					<string>https://thitlwin.github.io/joy_app/1.0.4(15)/JOY.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -37,7 +37,7 @@
 				<key>platform-identifier</key>
 				<string>com.apple.platform.iphoneos</string>
 				<key>title</key>
-				<string>JOY-1.0.4(15)</string>
+				<string>JOY-prod-1.0.4+15</string>
 			</dict>
 		</dict>
 	</array>
