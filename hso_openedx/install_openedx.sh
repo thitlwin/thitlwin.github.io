@@ -100,7 +100,7 @@ cat > launch_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🚀 Launching OpenEDX with Tutor..."
 source hso-openedx-venv/bin/activate
-tutor local launch
+tutor dev launch
 EOF
 
 # Create status check script
@@ -108,7 +108,7 @@ cat > check_status.sh << 'EOF'
 #!/bin/bash
 echo "📊 Checking OpenEDX status..."
 source hso-openedx-venv/bin/activate
-tutor local status
+tutor dev status
 EOF
 
 # Create stop script
@@ -116,7 +116,7 @@ cat > stop_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🛑 Stopping OpenEDX..."
 source hso-openedx-venv/bin/activate
-tutor local stop
+tutor dev stop
 EOF
 
 # Create restart script
@@ -124,7 +124,7 @@ cat > restart_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🔄 Restarting OpenEDX..."
 source hso-openedx-venv/bin/activate
-tutor local restart
+tutor dev restart
 EOF
 
 # Make scripts executable
@@ -135,7 +135,7 @@ print_status "Helper scripts created"
 cat > setup_firewall.sh << 'EOF'
 #!/bin/bash
 echo "🔥 Setting up GCP firewall rules for OpenEDX..."
-echo "Run these commands from your local machine with gcloud CLI:"
+echo "Run these commands from your dev machine with gcloud CLI:"
 echo ""
 echo "# Allow OpenEDX LMS (port 8000)"
 echo "gcloud compute firewall-rules create openedx-lms --allow tcp:8000 --source-ranges 0.0.0.0/0 --description 'OpenEDX LMS access'"
@@ -160,7 +160,7 @@ echo "1. Log out and log back in (to apply docker group changes):"
 echo "   exit"
 echo "   # Then SSH back in"
 echo ""
-echo "2. Set up GCP firewall rules (run from your local machine):"
+echo "2. Set up GCP firewall rules (run from your dev machine):"
 echo "   ./setup_firewall.sh"
 echo ""
 echo "3. Launch OpenEDX:"
