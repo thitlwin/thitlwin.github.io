@@ -96,7 +96,7 @@ fi
 echo "📝 Step 10: Creating helper scripts..."
 
 # Create launch script
-cat > launch_tutor.sh << 'EOF'
+cat > hso_launch_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🚀 Launching OpenEDX with Tutor..."
 source hso-openedx-venv/bin/activate
@@ -104,7 +104,7 @@ tutor local launch
 EOF
 
 # Create status check script
-cat > check_status.sh << 'EOF'
+cat > hso_check_status.sh << 'EOF'
 #!/bin/bash
 echo "📊 Checking OpenEDX status..."
 source hso-openedx-venv/bin/activate
@@ -112,7 +112,7 @@ tutor local status
 EOF
 
 # Create stop script
-cat > stop_tutor.sh << 'EOF'
+cat > hso_stop_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🛑 Stopping OpenEDX..."
 source hso-openedx-venv/bin/activate
@@ -120,15 +120,24 @@ tutor local stop
 EOF
 
 # Create restart script
-cat > restart_tutor.sh << 'EOF'
+cat > hso_restart_tutor.sh << 'EOF'
 #!/bin/bash
 echo "🔄 Restarting OpenEDX..."
 source hso-openedx-venv/bin/activate
 tutor local restart
 EOF
 
+
+# Create Super Admin User
+cat > hso_create_super_user.sh << 'EOF'
+#!/bin/bash
+echo "👑 Creating Super User..."
+source hso-openedx-venv/bin/activate
+tutor dev do createuser --staff --superuser thit saithitlwin@gmail.com
+EOF
+
 # Make scripts executable
-chmod +x launch_tutor.sh check_status.sh stop_tutor.sh restart_tutor.sh
+chmod +x hso_launch_tutor.sh hso_check_status.sh hso_stop_tutor.sh hso_restart_tutor.sh hso_create_super_user.sh
 print_status "Helper scripts created"
 
 # Step 11: Create GCP firewall rules script
@@ -160,24 +169,24 @@ echo "1. Log out and log back in (to apply docker group changes):"
 echo "   exit"
 echo "   # Then SSH back in"
 echo ""
-echo "2. Set up GCP firewall rules (run from your local machine):"
+echo "2. Set up GCP firewall rules (run from your local machine): (Optional)"
 echo "   ./setup_firewall.sh"
 echo ""
 echo "3. Launch OpenEDX:"
-echo "   ./launch_tutor.sh"
+echo "   ./hso_launch_tutor.sh"
 echo ""
 echo "4. Check status:"
-echo "   ./check_status.sh"
+echo "   ./hso_check_status.sh"
 echo ""
 echo "🌐 Access URLs (after launch):"
 echo "• LMS (Learning Management System): http://34.66.12.84:8000"
 echo "• CMS (Studio): http://34.66.12.84:8001"
 echo ""
 echo "🛠️  Available Commands:"
-echo "• Launch: ./launch_tutor.sh"
-echo "• Status: ./check_status.sh"
-echo "• Stop: ./stop_tutor.sh"
-echo "• Restart: ./restart_tutor.sh"
+echo "• Launch: ./hso_launch_tutor.sh"
+echo "• Status: ./hso_check_status.sh"
+echo "• Stop: ./hso_stop_tutor.sh"
+echo "• Restart: ./hso_restart_tutor.sh"
 echo ""
 echo "📊 VM Specifications:"
 echo "• Instance: hso-staging"
