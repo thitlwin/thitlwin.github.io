@@ -97,7 +97,6 @@ export const projects = [
     name: "JOY",
     description: "Detox & healthy meal app with subscriptions, ordering, and real-time chat support.",
     tech: ["Flutter", "Riverpod", "Firebase"],
-    team: "Solo",
     links: {
       play: "https://play.google.com/store/apps/details?id=com.joy.detox_app",
       appStore: "https://apps.apple.com/th/app/joy-detox-healthy-meal/id6748552075",
@@ -107,7 +106,6 @@ export const projects = [
     name: "Tayarr",
     description: "Media player for Dhamma talks — Kotlin & Jetpack Compose with multi-module MVVM.",
     tech: ["Kotlin", "Jetpack Compose", "MVVM", "Firebase"],
-    team: "Solo",
     links: {
       play: "https://play.google.com/store/apps/details?id=com.thit.yawki",
     },
@@ -115,8 +113,7 @@ export const projects = [
   {
     name: "Jaz Accounting",
     description: "B2B accounting workflows built with Kotlin Flow and Coroutines.",
-    tech: ["Kotlin", "Flow", "Coroutines"],
-    team: "3 members",
+    tech: ["Kotlin", "Flow", "Coroutines"],    
     links: {
       play: "https://play.google.com/store/apps/details?id=com.tinvio.jaz",
     },
@@ -126,7 +123,6 @@ export const projects = [
     description:
       "E-learning platform for obstetrics & gynaecology trainees — MRCOG courses, 500+ video lectures, progress tracking, and secure streaming.",
     tech: ["Flutter", "Video streaming", "Education"],
-    team: "Solo",
     links: {
       play: "https://play.google.com/store/apps/details?id=com.victorymrcog.mrcog_mobile",
       appStore: "https://apps.apple.com/th/app/victory-mrcog/id6787036136",

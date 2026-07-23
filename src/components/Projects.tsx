@@ -24,10 +24,7 @@ export function Projects() {
                 <div className="flex items-baseline justify-between gap-3">
                   <h3 className="font-display text-2xl font-bold text-ink transition-colors group-hover:text-accent">
                     {project.name}
-                  </h3>
-                  <span className="text-xs font-medium uppercase tracking-wide text-ink-soft">
-                    {project.team}
-                  </span>
+                  </h3>                  
                 </div>
                 <p className="mt-3 text-[0.95rem] leading-relaxed text-ink-soft">
                   {project.description}

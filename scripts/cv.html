@@ -1,243 +1,403 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Thit Lwin — Senior Software Engineer CV</title>
-  <style>
-    @page {
-      size: A4;
-      margin: 12mm 14mm;
-    }
-    * { box-sizing: border-box; }
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 9.5pt;
-      line-height: 1.35;
-      color: #1a1a1a;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      font-size: 22pt;
-      margin: 0 0 2pt;
-      letter-spacing: -0.02em;
-    }
-    .title {
-      font-size: 11pt;
-      font-weight: 600;
-      color: #0d6e63;
-      margin: 0 0 4pt;
-    }
-    .tagline {
-      font-size: 8.5pt;
-      color: #444;
-      margin: 0 0 8pt;
-      max-width: 95%;
-    }
-    .contact {
-      font-size: 8.5pt;
-      color: #333;
-      margin-bottom: 10pt;
-      line-height: 1.45;
-    }
-    .contact a { color: #0d6e63; text-decoration: none; }
-    h2 {
-      font-size: 10pt;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #0d6e63;
-      border-bottom: 1.5px solid #0d6e63;
-      padding-bottom: 2pt;
-      margin: 11pt 0 6pt;
-    }
-    p { margin: 0 0 6pt; }
-    .job { margin-bottom: 7pt; page-break-inside: avoid; }
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 8pt;
-      align-items: baseline;
-    }
-    .job-role { font-weight: 700; font-size: 10pt; }
-    .job-meta { font-size: 8.5pt; color: #444; margin: 1pt 0 3pt; }
-    .period { font-size: 8.5pt; color: #555; white-space: nowrap; }
-    ul {
-      margin: 0;
-      padding-left: 14pt;
-    }
-    li { margin-bottom: 1.5pt; }
-    .tech {
-      font-size: 8pt;
-      color: #0d6e63;
-      margin-top: 2pt;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4pt 16pt;
-    }
-    .skill-cat { margin-bottom: 3pt; }
-    .project { margin-bottom: 5pt; page-break-inside: avoid; }
-    .project strong { font-size: 9.5pt; }
-    .muted { color: #555; font-size: 8.5pt; }
-  </style>
-</head>
-<body>
-  <h1>Thit Lwin</h1>
-  <p class="title">Senior Software Engineer</p>
-  <p class="tagline">
-    12+ years building and shipping software — mobile, web, and backend — from architecture and clean code through release and production support.
-  </p>
-  <div class="contact">
-    <strong>Mandalay Address</strong><br />
-    Room(7), MM25, Building 5, MyaYeeNandar Housing,<br />
-    Chanmyatharsi Township, Mandalay, 05041, Myanmar<br />
-    Phone / WhatsApp / Telegram: +959256130323 · Skype: saithitlwin<br />
-    Email: <a href="mailto:saithitlwin@gmail.com">saithitlwin@gmail.com</a> ·
-    LinkedIn: <a href="https://www.linkedin.com/in/thit-lwin/">linkedin.com/in/thit-lwin</a> ·
-    Website: <a href="https://thitlwin.github.io/">thitlwin.github.io</a>
-  </div>
-
-  <h2>Profile</h2>
-  <p>
-    Senior Software Engineer with 12+ years of software development experience, including 6+ years specializing in native Android.
-    Deep expertise in Kotlin, Jetpack Compose, MVVM, Clean Architecture, and shipping production apps end to end — architecture, CI/CD, store releases, and post-release optimization.
-    Also experienced across Flutter and fullstack delivery when products need web and backend support.
-  </p>
-
-  <h2>Experience</h2>
-
-  <div class="job">
-    <div class="job-header">
-      <div class="job-role">Senior Flutter Developer</div>
-      <div class="period">Jan 2024 – Present</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thit Lwin — Senior Software Engineer CV</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 12mm 14mm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.35;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 22pt;
+        margin: 0 0 2pt;
+        letter-spacing: -0.02em;
+      }
+      .title {
+        font-size: 11pt;
+        font-weight: 600;
+        color: #0d6e63;
+        margin: 0 0 4pt;
+      }
+      .tagline {
+        font-size: 8.5pt;
+        color: #444;
+        margin: 0 0 8pt;
+        max-width: 95%;
+      }
+      .contact {
+        font-size: 8.5pt;
+        color: #333;
+        margin-bottom: 10pt;
+        line-height: 1.45;
+      }
+      .contact a {
+        color: #0d6e63;
+        text-decoration: none;
+      }
+      h2 {
+        font-size: 10pt;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #0d6e63;
+        border-bottom: 1.5px solid #0d6e63;
+        padding-bottom: 2pt;
+        margin: 11pt 0 6pt;
+      }
+      p {
+        margin: 0 0 6pt;
+      }
+      .job {
+        margin-bottom: 7pt;
+        page-break-inside: avoid;
+      }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 8pt;
+        align-items: baseline;
+      }
+      .job-role {
+        font-weight: 700;
+        font-size: 10pt;
+      }
+      .job-meta {
+        font-size: 8.5pt;
+        color: #444;
+        margin: 1pt 0 3pt;
+      }
+      .period {
+        font-size: 8.5pt;
+        color: #555;
+        white-space: nowrap;
+      }
+      ul {
+        margin: 0;
+        padding-left: 14pt;
+      }
+      li {
+        margin-bottom: 1.5pt;
+      }
+      .tech {
+        font-size: 8pt;
+        color: #0d6e63;
+        margin-top: 2pt;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4pt 16pt;
+      }
+      .skill-cat {
+        margin-bottom: 3pt;
+      }
+      .project {
+        margin-bottom: 5pt;
+        page-break-inside: avoid;
+      }
+      .project strong {
+        font-size: 9.5pt;
+      }
+      .muted {
+        color: #555;
+        font-size: 8.5pt;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thit Lwin</h1>
+    <p class="title">Senior Software Engineer</p>
+    <p class="tagline">
+      12+ years building and shipping software — mobile, web, and backend — from
+      architecture and clean code through release and production support.
+    </p>
+    <div class="contact">
+      <strong>Mandalay Address</strong><br />
+      Room(7), MM25, Building 5, MyaYeeNandar Housing,<br />
+      Chanmyatharsi Township, Mandalay, 05041, Myanmar<br />
+      Phone / WhatsApp / Telegram: +959256130323 · Skype: saithitlwin<br />
+      Email: <a href="mailto:saithitlwin@gmail.com">saithitlwin@gmail.com</a> ·
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/thit-lwin/"
+        >linkedin.com/in/thit-lwin</a
+      >
+      · Website: <a href="https://thitlwin.github.io/">thitlwin.github.io</a>
     </div>
-    <div class="job-meta">JOY Detox &amp; Healthy Meal Distribution Co.Ltd · Myanmar (Remote)</div>
-    <ul>
-      <li>Owned the full lifecycle of a production Flutter app (iOS &amp; Android) with subscription meal plans, ecommerce-like ordering, and real-time support.</li>
-      <li>Designed modular architecture with Riverpod for maintainability and faster feature delivery.</li>
-      <li>Built real-time chat with Firebase for low-latency customer–coach communication.</li>
-      <li>Implemented CI/CD with Fastlane + GitHub Actions for App Store &amp; Play Store deployment.</li>
-      <li>Diagnosed production crashes, performance bottlenecks, and API failures to keep the app stable.</li>
-    </ul>
-    <div class="tech">Dart · Flutter · Riverpod · Firebase · Fastlane · GitHub Actions</div>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <div class="job-role">Android Developer</div>
-      <div class="period">Apr 2023 – Dec 2023</div>
+    <h2>Profile</h2>
+    <p>
+      Senior Software Engineer with 12+ years of software development
+      experience, including 6+ years specializing in native Android. Deep
+      expertise in Kotlin, Jetpack Compose, MVVM, Clean Architecture, and
+      shipping production apps end to end — architecture, CI/CD, store releases,
+      and post-release optimization. Also experienced across Flutter and
+      fullstack delivery when products need web and backend support.
+    </p>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-role">Senior Flutter Developer</div>
+        <div class="period">Jan 2024 – Present</div>
+      </div>
+      <div class="job-meta">
+        JOY Detox &amp; Healthy Meal Distribution Co.Ltd · Myanmar (Remote)
+      </div>
+      <ul>
+        <li>
+          Owned the full lifecycle of a production Flutter app (iOS &amp;
+          Android) with subscription meal plans, ecommerce-like ordering, and
+          real-time support.
+        </li>
+        <li>
+          Designed modular architecture with Riverpod for maintainability and
+          faster feature delivery.
+        </li>
+        <li>
+          Built real-time chat with Firebase for low-latency customer–coach
+          communication.
+        </li>
+        <li>
+          Implemented CI/CD with Fastlane + GitHub Actions for App Store &amp;
+          Play Store deployment.
+        </li>
+        <li>
+          Diagnosed production crashes, performance bottlenecks, and API
+          failures to keep the app stable.
+        </li>
+      </ul>
+      <div class="tech">
+        Dart · Flutter · Riverpod · Firebase · Fastlane · GitHub Actions
+      </div>
     </div>
-    <div class="job-meta">Zuju Gameplay PTE. Ltd · Singapore (Remote)</div>
-    <ul>
-      <li>Built scalable features for a live sports gameplay app focused on real-time interaction and performance.</li>
-      <li>Applied MVVM and clean API integration for maintainable, testable modules.</li>
-      <li>Shipped unit-tested modules that reduced regressions.</li>
-      <li>Used Android &amp; Rive animation libraries for smooth, interactive motion.</li>
-    </ul>
-    <div class="tech">Kotlin · MVVM · Retrofit · GraphQL · AWS AppSync · Rive · JUnit · Espresso</div>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <div class="job-role">Android Developer</div>
-      <div class="period">Jan 2022 – Apr 2023</div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-role">Android Developer</div>
+        <div class="period">Apr 2023 – Dec 2023</div>
+      </div>
+      <div class="job-meta">Zuju Gameplay PTE. Ltd · Singapore (Remote)</div>
+      <ul>
+        <li>
+          Built scalable features for a live sports gameplay app focused on
+          real-time interaction and performance.
+        </li>
+        <li>
+          Applied MVVM and clean API integration for maintainable, testable
+          modules.
+        </li>
+        <li>Shipped unit-tested modules that reduced regressions.</li>
+        <li>
+          Used Android &amp; Rive animation libraries for smooth, interactive
+          motion.
+        </li>
+      </ul>
+      <div class="tech">
+        Kotlin · MVVM · Retrofit · GraphQL · AWS AppSync · Rive · JUnit ·
+        Espresso
+      </div>
     </div>
-    <div class="job-meta">Digital Services SG Six PTE. Ltd · Singapore (Remote)</div>
-    <ul>
-      <li>Delivered features for B2B apps Tinvio and Jaz Accounting — ordering and business workflows.</li>
-      <li>Migrated legacy MVP architecture to MVVM for better scalability.</li>
-      <li>Collaborated with design, backend, and product to ship reliably.</li>
-      <li>Maintained automated tests to protect against regressions.</li>
-    </ul>
-    <div class="tech">Kotlin · MVVM · Retrofit · GraphQL · Coroutines · JUnit</div>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <div class="job-role">Senior Software Engineer (Android &amp; Flutter)</div>
-      <div class="period">Feb 2019 – Nov 2021</div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-role">Android Developer</div>
+        <div class="period">Jan 2022 – Apr 2023</div>
+      </div>
+      <div class="job-meta">
+        Digital Services SG Six PTE. Ltd · Singapore (Remote)
+      </div>
+      <ul>
+        <li>
+          Delivered features for B2B apps Tinvio and Jaz Accounting — ordering
+          and business workflows.
+        </li>
+        <li>
+          Migrated legacy MVP architecture to MVVM for better scalability.
+        </li>
+        <li>
+          Collaborated with design, backend, and product to ship reliably.
+        </li>
+        <li>Maintained automated tests to protect against regressions.</li>
+      </ul>
+      <div class="tech">
+        Kotlin · MVVM · Retrofit · GraphQL · Coroutines · JUnit
+      </div>
     </div>
-    <div class="job-meta">Twinrock PTE. Ltd · Singapore (Remote)</div>
-    <ul>
-      <li>Contributed to mobile and web system planning alongside the CTO.</li>
-      <li>Built Flutter apps with Bloc and GetX for complex state flows.</li>
-      <li>Led sprint planning across mobile and web teams.</li>
-      <li>Managed App Store &amp; Play Store releases and mentored developers through reviews.</li>
-    </ul>
-    <div class="tech">Java · Kotlin · Flutter · Dart · Bloc · GetX · MVP</div>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <div class="job-role">Project Manager, Web &amp; Android Developer</div>
-      <div class="period">Apr 2014 – Dec 2018</div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-role">
+          Senior Software Engineer (Android &amp; Flutter)
+        </div>
+        <div class="period">Feb 2019 – Nov 2021</div>
+      </div>
+      <div class="job-meta">Twinrock PTE. Ltd · Singapore (Remote)</div>
+      <ul>
+        <li>
+          Contributed to mobile and web system planning alongside the CTO.
+        </li>
+        <li>Built Flutter apps with Bloc and GetX for complex state flows.</li>
+        <li>Led sprint planning across mobile and web teams.</li>
+        <li>
+          Managed App Store &amp; Play Store releases and mentored developers
+          through reviews.
+        </li>
+      </ul>
+      <div class="tech">Java · Kotlin · Flutter · Dart · Bloc · GetX · MVP</div>
     </div>
-    <div class="job-meta">Bits Manager Co., Ltd · Myanmar</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-role">Project Manager, Web &amp; Android Developer</div>
+        <div class="period">Apr 2014 – Dec 2018</div>
+      </div>
+      <div class="job-meta">Bits Manager Co., Ltd · Myanmar</div>
+      <ul>
+        <li>
+          Led ecommerce apps covering ordering flows, payments, and backend
+          coordination.
+        </li>
+        <li>
+          Managed full-stack delivery across web (PHP, Node.js) and mobile.
+        </li>
+        <li>
+          Oversaw hosting on AWS &amp; DigitalOcean with a 95% on-time delivery
+          rate.
+        </li>
+        <li>Balanced technical leadership with hands-on development.</li>
+      </ul>
+      <div class="tech">
+        Java · PHP · Node.js · AWS · DigitalOcean · Project Management
+      </div>
+    </div>
+
+    <h2>Commercial Projects</h2>
+    <div class="project">
+      <strong>JOY</strong> — Detox &amp; healthy meal app with subscriptions,
+      ordering, and real-time chat support.
+      <span class="muted">Flutter, Riverpod, Firebase</span><br />
+      <span class="muted">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.joy.detox_app"
+          >Play Store</a
+        >
+        ·
+        <a
+          href="https://apps.apple.com/th/app/joy-detox-healthy-meal/id6748552075"
+          >App Store</a
+        >
+      </span>
+    </div>
+    <div class="project">
+      <strong>Victory MRCOG</strong> — E-learning platform for obstetrics &amp;
+      gynaecology trainees — MRCOG courses, 500+ video lectures, progress
+      tracking, and secure streaming.
+      <span class="muted">Flutter, Video streaming, Education</span><br />
+      <span class="muted">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.victorymrcog.mrcog_mobile"
+          >Play Store</a
+        >
+        ·
+        <a href="https://apps.apple.com/th/app/victory-mrcog/id6787036136"
+          >App Store</a
+        >
+      </span>
+    </div>
+    <div class="project">
+      <strong>Tayarr</strong> — Media player for Dhamma talks — Kotlin &amp;
+      Jetpack Compose with multi-module MVVM.
+      <span class="muted">Kotlin, Jetpack Compose, MVVM, Firebase</span><br />
+      <span class="muted">
+        <a href="https://play.google.com/store/apps/details?id=com.thit.yawki"
+          >Play Store</a
+        >
+      </span>
+    </div>
+    <div class="project">
+      <strong>Jaz Accounting</strong> — B2B accounting workflows built with
+      Kotlin Flow and Coroutines.
+      <span class="muted">Kotlin, Flow, Coroutines</span><br />
+      <span class="muted">
+        <a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz"
+          >Play Store</a
+        >
+      </span>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="grid-2">
+      <div class="skill-cat">
+        <strong>Mobile:</strong> Android (Kotlin, Java), Jetpack Compose,
+        Flutter (Dart), iOS (Swift), React Native
+      </div>
+      <div class="skill-cat">
+        <strong>Architecture:</strong> MVVM, Clean Architecture, Multi-module,
+        Riverpod, Bloc / GetX
+      </div>
+      <div class="skill-cat">
+        <strong>Backend:</strong> Firebase, Supabase, REST, GraphQL, AWS AppSync
+      </div>
+      <div class="skill-cat">
+        <strong>Web:</strong> Next.js, Node.js, PHP (Laravel), Spring Boot,
+        Python (Django)
+      </div>
+      <div class="skill-cat">
+        <strong>Delivery:</strong> CI/CD, Fastlane, GitHub Actions, Play Store,
+        App Store
+      </div>
+      <div class="skill-cat">
+        <strong>Leadership:</strong> Project Management, Mentoring, Sprint
+        Planning, Agile
+      </div>
+    </div>
+
+    <h2>Education</h2>
+    <div class="grid-2">
+      <div>
+        <strong>M.C.Sc</strong> — University of Computer Studies, Mandalay
+        <span class="muted">(2016)</span>
+      </div>
+      <div>
+        <strong>B.C.Sc (Hons.)</strong> — University of Computer Studies,
+        Mandalay <span class="muted">(2012)</span>
+      </div>
+      <div>
+        <strong>PMP Course</strong> — PMBOK® Guide – Sixth Edition
+        <span class="muted">(2018)</span>
+      </div>
+      <div>
+        <strong>Mobile App Training</strong> — Samsung Tech Institute, Myanmar
+        <span class="muted">(2014)</span>
+      </div>
+      <div>
+        <strong>Software Engineering</strong> — ICT Training Institute, Myanmar
+        <span class="muted">(2014)</span>
+      </div>
+    </div>
+
+    <h2>Awards</h2>
     <ul>
-      <li>Led ecommerce apps covering ordering flows, payments, and backend coordination.</li>
-      <li>Managed full-stack delivery across web (PHP, Node.js) and mobile.</li>
-      <li>Oversaw hosting on AWS &amp; DigitalOcean with a 95% on-time delivery rate.</li>
-      <li>Balanced technical leadership with hands-on development.</li>
+      <li>
+        <strong>First Runner Up</strong> — Samsung Tech Institute Mobile App
+        Training Programme (money changer application for Android)
+      </li>
+      <li>
+        <strong>Third Workshop Outstanding</strong> — ICT Training Institute
+        (ICTTI), Yangon (online library management web application)
+      </li>
     </ul>
-    <div class="tech">Java · PHP · Node.js · AWS · DigitalOcean · Project Management</div>
-  </div>
-
-  <h2>Commercial Projects</h2>
-  <div class="project">
-    <strong>JOY</strong> — Detox &amp; healthy meal app with subscriptions, ordering, and real-time chat support.
-    <span class="muted">Solo · Flutter, Riverpod, Firebase</span><br />
-    <span class="muted">
-      <a href="https://play.google.com/store/apps/details?id=com.joy.detox_app">Play Store</a> ·
-      <a href="https://apps.apple.com/th/app/joy-detox-healthy-meal/id6748552075">App Store</a>
-    </span>
-  </div>
-  <div class="project">
-    <strong>Victory MRCOG</strong> — E-learning platform for obstetrics &amp; gynaecology trainees — MRCOG courses, 500+ video lectures, progress tracking, and secure streaming.
-    <span class="muted">Solo · Flutter, Video streaming, Education</span><br />
-    <span class="muted">
-      <a href="https://play.google.com/store/apps/details?id=com.victorymrcog.mrcog_mobile">Play Store</a> ·
-      <a href="https://apps.apple.com/th/app/victory-mrcog/id6787036136">App Store</a>
-    </span>
-  </div>
-  <div class="project">
-    <strong>Tayarr</strong> — Media player for Dhamma talks — Kotlin &amp; Jetpack Compose with multi-module MVVM.
-    <span class="muted">Solo · Kotlin, Jetpack Compose, MVVM, Firebase</span><br />
-    <span class="muted">
-      <a href="https://play.google.com/store/apps/details?id=com.thit.yawki">Play Store</a>
-    </span>
-  </div>
-  <div class="project">
-    <strong>Jaz Accounting</strong> — B2B accounting workflows built with Kotlin Flow and Coroutines.
-    <span class="muted">3 members · Kotlin, Flow, Coroutines</span><br />
-    <span class="muted">
-      <a href="https://play.google.com/store/apps/details?id=com.tinvio.jaz">Play Store</a>
-    </span>
-  </div>
-
-  <h2>Skills</h2>
-  <div class="grid-2">
-    <div class="skill-cat"><strong>Mobile:</strong> Android (Kotlin, Java), Jetpack Compose, Flutter (Dart), iOS (Swift), React Native</div>
-    <div class="skill-cat"><strong>Architecture:</strong> MVVM, Clean Architecture, Multi-module, Riverpod, Bloc / GetX</div>
-    <div class="skill-cat"><strong>Backend:</strong> Firebase, Supabase, REST, GraphQL, AWS AppSync</div>
-    <div class="skill-cat"><strong>Web:</strong> Next.js, Node.js, PHP (Laravel), Spring Boot, Python (Django)</div>
-    <div class="skill-cat"><strong>Delivery:</strong> CI/CD, Fastlane, GitHub Actions, Play Store, App Store</div>
-    <div class="skill-cat"><strong>Leadership:</strong> Project Management, Mentoring, Sprint Planning, Agile</div>
-  </div>
-
-  <h2>Education</h2>
-  <div class="grid-2">
-    <div><strong>M.C.Sc</strong> — University of Computer Studies, Mandalay <span class="muted">(2016)</span></div>
-    <div><strong>B.C.Sc (Hons.)</strong> — University of Computer Studies, Mandalay <span class="muted">(2012)</span></div>
-    <div><strong>PMP Course</strong> — PMBOK® Guide – Sixth Edition <span class="muted">(2018)</span></div>
-    <div><strong>Mobile App Training</strong> — Samsung Tech Institute, Myanmar <span class="muted">(2014)</span></div>
-    <div><strong>Software Engineering</strong> — ICT Training Institute, Myanmar <span class="muted">(2014)</span></div>
-  </div>
-
-  <h2>Awards</h2>
-  <ul>
-    <li><strong>First Runner Up</strong> — Samsung Tech Institute Mobile App Training Programme (money changer application for Android)</li>
-    <li><strong>Third Workshop Outstanding</strong> — ICT Training Institute (ICTTI), Yangon (online library management web application)</li>
-  </ul>
-</body>
+  </body>
 </html>
