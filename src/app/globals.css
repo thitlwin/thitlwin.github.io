@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+  --mist: #e8eef2;
+  --mist-deep: #d4e0e8;
+  --ink: #0f1a1f;
+  --ink-soft: #3a4a52;
+  --surface: #f4f8fa;
+  --accent: #0d8f7f;
+  --accent-deep: #07665b;
+  --accent-glow: rgba(13, 143, 127, 0.18);
+  --line: rgba(15, 26, 31, 0.1);
+  --hero-a: #c5d8e4;
+  --hero-b: #9ec9c2;
+  --hero-c: #e8eef2;
+}
+
+@theme inline {
+  --color-mist: var(--mist);
+  --color-mist-deep: var(--mist-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--mist);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Atmospheric hero field — full-bleed gradient mesh */
+.hero-field {
+  background:
+    radial-gradient(ellipse 80% 60% at 75% 20%, var(--hero-b) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 15% 80%, var(--hero-a) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, #b8d4cf 0%, transparent 60%),
+    linear-gradient(165deg, var(--hero-c) 0%, var(--mist-deep) 100%);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(15, 26, 31, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 26, 31, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-rise-delay-1 {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.animate-rise-delay-2 {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.animate-rise-delay-3 {
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+}
+
+.animate-fade {
+  animation: fade-in 1.2s ease both;
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .animate-rise-delay-1,
+  .animate-rise-delay-2,
+  .animate-rise-delay-3,
+  .animate-fade,
+  .animate-drift {
+    animation: none;
+  }
+}
+
+.section-pad {
+  padding-inline: clamp(1.25rem, 5vw, 4rem);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
